@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkbox-group label {
+    margin-right: 20px;
+}
+
+.button-group {
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+}
+
+.remove-button {
+    margin-left: 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <title>Escala de Voluntários</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Escala de Voluntários</h1>
+        <form id="volunteerForm">
+            <div class="form-section">
+                <h2>Informação do Mês e Ano</h2>
+                <label for="monthYear">Mês e Ano:</label>
+                <input type="month" id="monthYear" name="monthYear" required>
+            </div>
+
+            <div class="form-section">
+                <h2>Dias da Semana</h2>
+                <fieldset id="daysOfWeek">
+                    <legend>Selecione os dias da semana:</legend>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="daysOfWeek" value="segunda"> Segunda-feira</label>
+                        <label><input type="checkbox" name="daysOfWeek" value="terça"> Terça-feira</label>
+                        <label><input type="checkbox" name="daysOfWeek" value="quarta"> Quarta-feira</label>
+                        <label><input type="checkbox" name="daysOfWeek" value="quinta"> Quinta-feira</label>
+                        <label><input type="checkbox" name="daysOfWeek" value="sexta"> Sexta-feira</label>
+                        <label><input type="checkbox" name="daysOfWeek" value="sábado"> Sábado</label>
+                        <label><input type="checkbox" name="daysOfWeek" value="domingo"> Domingo</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="form-section">
+                <h2>Turnos Disponíveis</h2>
+                <fieldset id="shifts">
+                    <legend>Selecione os turnos:</legend>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="shifts" value="manha"> Manhã</label>
+                        <label><input type="checkbox" name="shifts" value="tarde"> Tarde</label>
+                        <label><input type="checkbox" name="shifts" value="noite"> Noite</label>
+                        <label><input type="checkbox" name="shifts" value="dia_todo"> Dia todo</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="form-section">
+                <h2>Quantos voluntários de cada função serão necessários?</h2>
+                <label>Fotógrafo: <input type="number" name="quantidade_fotografo" value=""></label><br>
+                <label>Videomaker: <input type="number" name="quantidade_videomaker" value=""></label><br>
+                <label>Streaming: <input type="number" name="quantidade_streaming" value=""></label><br>
+                <label>Iluminação: <input type="number" name="quantidade_iluminacao" value=""></label><br>
+                <label>Projeção: <input type="number" name="quantidade_projecao" value=""></label><br><br>
+            </div>
+
+            <div class="form-section">
+                <h2>Voluntários</h2>
+                <div id="volunteers">
+                    <!-- Voluntários adicionados dinamicamente -->
+                </div>
+                <button type="button" id="addVolunteer">Adicionar Voluntário</button>
+            </div>
+
+            <div class="form-section">
+                <h2>Indisponibilidades Específicas (Opcional)</h2>
+                <div id="unavailabilities">
+                    <!-- Indisponibilidades adicionadas dinamicamente -->
+                </div>
+                <button type="button" id="addUnavailability">Adicionar Indisponibilidade</button>
+            </div>
+
+            <div class="form-section">
+                <h2>Eventos Extras (Opcional)</h2>
+                <div id="events">
+                    <!-- Eventos adicionados dinamicamente -->
+                </div>
+                <button type="button" id="addEvent">Adicionar Evento</button>
+            </div>
+
+            <button type="submit">Gerar Escala</button>
+        </form>
+
+        <div class="form-section">
+            <h2>Escala Gerada</h2>
+            <textarea id="generatedSchedule" rows="10" readonly></textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
